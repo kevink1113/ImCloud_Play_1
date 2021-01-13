@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import StyleView from './StyleView';
+import StyleStat from './StyleStat';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyleView/>
+    <StyleStat/>
   </React.StrictMode>,
   document.getElementById('root')
 );
