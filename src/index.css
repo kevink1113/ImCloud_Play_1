@@ -1,12 +1,12 @@
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  margin: 0;
-  font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    font-weight: 300;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 #root {
