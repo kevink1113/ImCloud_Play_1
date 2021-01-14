@@ -10,13 +10,16 @@ function StyleView() {
           <h4>강상원</h4>
           <h3>Urban Style</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec leo neque. Pellentesque sed"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Pellentesque nec leo neque. Pellentesque sed"
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec leo neque. Pellentesque sed est mattis, rhoncus elit eu,tortor quis interdum fermentum, magna leo pulvinar arcu, cursus rhoncus nulla turpis quis sem. Aenean lacinia efficitur ex, eget lobortis purus ven
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec leo neque. 
+            Pellentesque sed est mattis, rhoncus elit eu,tortor quis interdum fermentum, 
+            magna leo pulvinar arcu, cursus rhoncus nulla turpis quis sem. 
+            Aenean lacinia efficitur ex, eget lobortis purus ven
           </p>
         </div>
-
       </div>
     </div>
   );

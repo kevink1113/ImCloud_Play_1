@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import MainPage2 from "./MainPage2";
 import StartButton from "./StartButton";
 
-class App extends Component {
+class MainPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class App extends Component {
 
   render() { 
     return (
-      <div>       
+      <div className="main">       
         <MainPage2 title={this.state.mainTitle} cont={this.state.mainContents} />
         <StartButton start = {this.state.startB}></StartButton>
       </div>
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MainPage;

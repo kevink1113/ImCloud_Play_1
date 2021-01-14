@@ -9,7 +9,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="total">
       {/*  시작페이지  */}
       <Route exact path="/">
         <MainPage />

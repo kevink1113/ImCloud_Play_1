@@ -1,19 +1,23 @@
-* {
-    background-color: rgb(241, 234, 224);
-  }
-  
-  #mainPage_title {
+body {
+    background-color: rgb(172, 189, 204);
+}
+
+.main {
     text-align: center;
-  }
-  
-  #mainPage_cont {
+    margin: auto 0;
+}
+
+#mainPage_title {
+    text-align: center;
+}
+
+#mainPage_cont {
     text-align: center;
     margin: 0.5em;
     padding: 140px;
     padding-top: 80px;
-  }
-  
-  
-  #startBt {
+}
+
+#startBt {
     text-align: center;
-  }
+}
