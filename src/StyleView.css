@@ -25,7 +25,7 @@ h1 {
     margin: 1rem;
 }
 
-img {
+.photo {
     height: 600px;
     margin: 2rem;
     object-fit: cover;
