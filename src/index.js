@@ -7,6 +7,7 @@ import StyleStat from "./StyleStat";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
+import Entertain from "./Entertain";
 
 import "./mainpage/MainC.css";
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/result">
         <StyleView />
         <StyleStat />
+        <Entertain />
       </Route>
     </div>
   );
