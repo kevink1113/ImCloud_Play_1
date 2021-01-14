@@ -12,27 +12,27 @@ import Entertain from "./Entertain";
 import "./mainpage/MainC.css";
 
 function App() {
-  return (
-    <div>
-      {/*  시작페이지  */}
-      <Route exact path="/">
-        <MainPage />
-      </Route>
-      {/*  결과 */}
-      <Route path="/result">
-        <StyleView />
-        <StyleStat />
-        <Entertain />
-      </Route>
-    </div>
-  );
+    return (
+        <div>
+            {/* 시작페이지 */}
+            <Route exact path="/">
+                <MainPage />
+            </Route>
+            {/*  결과 */}
+            <Route path="/result">
+                <StyleView />
+                <StyleStat />
+                <Entertain />
+            </Route>
+        </div>
+    );
 }
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
