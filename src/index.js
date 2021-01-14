@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./mainpage/MainC.css";
 import StyleView from "./StyleView";
 import StyleStat from "./StyleStat";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
+
+import "./mainpage/MainC.css";
 
 function App() {
   return (

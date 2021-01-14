@@ -1,19 +1,43 @@
-* {
-    background-color: rgb(241, 234, 224);
-  }
-  
-  #mainPage_title {
-    text-align: center;
-  }
-  
-  #mainPage_cont {
-    text-align: center;
-    margin: 0.5em;
-    padding: 140px;
-    padding-top: 80px;
-  }
-  
-  
-  #startBt {
-    text-align: center;
-  }
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  background-color: rgb(192, 217, 236);
+}
+
+#mainPage_title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#mainPage_cont {
+  text-align: center;
+  margin: 0.5em;
+  padding: 140px;
+  padding-top: 80px;
+  font-weight: 100;
+}
+
+#startBt {
+  text-align: center;
+}
+#startBt > a {
+  background-color: rgb(126, 145, 199);
+  padding: 13px 24px;
+  border-radius: 20%;
+  color: black;
+  text-decoration: none;
+  transition: all 0.39s;
+}
+
+#startBt > a:hover {
+  background-color: rgb(214, 205, 162);
+  border: 0px;
+}
+
+.mainScreen {
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+  vertical-align: middle;
+}
