@@ -7,6 +7,10 @@ import Influencer from "./Influencer";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
+import Entertain from "./Entertain";
+import PlayLogin from "./playFinalPage/PlayLogin";
+
+import "./mainpage/MainC.css";
 
 function App() {
   return (
@@ -19,7 +23,9 @@ function App() {
       <Route path="/result">
         <StyleView />
         <StyleStat />
+        <Entertain />
         <Influencer />
+        <PlayLogin />
       </Route>
     </div>
   );
