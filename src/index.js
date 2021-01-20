@@ -6,33 +6,37 @@ import StyleView from "./StyleView";
 import StyleStat from "./StyleStat";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Entertain from "./Entertain";
+import PlayLogin from "./playFinalPage/PlayLogin";
 
 import "./mainpage/MainC.css";
 
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 function App() {
-    return (
-        <div>
-            {/* 시작페이지 */}
-            <Route exact path="/">
-                <MainPage />
-            </Route>
-            {/*  결과 */}
-            <Route path="/result">
-                <StyleView />
-                <StyleStat />
-                <Entertain />
-            </Route>
-        </div>
-    );
+  return (
+    <div>
+      {/* 시작페이지 */}
+      <Route exact path="/">
+        <MainPage />
+      </Route>
+      {/*  결과 */}
+      <Route path="/result">
+        <StyleView />
+        <StyleStat />
+        <Entertain />
+        <PlayLogin />
+      </Route>
+    </div>
+  );
 }
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
-    document.getElementById("root")
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

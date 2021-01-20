@@ -1,0 +1,56 @@
+.lastTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 240px;
+  padding-top: 100px;
+}
+
+.lastCont {
+  text-align: center;
+  width: auto;
+  padding-left: 33%;
+  padding-right: 33%;
+  padding-bottom: 180px;
+  margin: 0% 0%;
+}
+
+#nextBox {
+  text-align: center;
+  margin-bottom: 190px;
+}
+#nextBox > a {
+  background-color: rgb(126, 145, 199);
+  padding: 13px 24px;
+  border-radius: 20%;
+  color: rgb(6, 7, 61);
+  text-decoration: none;
+  transition: all 0.229s;
+}
+#nextBox > a:hover {
+  background-color: rgb(214, 205, 162);
+  border: 0px;
+}
+
+.nextButton {
+  width: auto;
+  padding-left: 33%;
+  padding-right: 33%;
+}
+
+#logTemp {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+}
+#logTemp > a {
+  background-color: rgb(140, 179, 125);
+  padding: 13px 24px;
+  border-radius: 20%;
+  color: rgb(6, 7, 61);
+  text-decoration: none;
+  transition: all 0.229s;
+}
+#logTemp > a:hover {
+  background-color: rgb(173, 168, 143);
+  border: 0px;
+}

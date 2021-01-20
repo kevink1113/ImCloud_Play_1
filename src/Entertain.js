@@ -3,7 +3,7 @@ import "./StyleView.css";
 function Entertain() {
   return (
     <div class="entertainBox">
-      <h2 id="entertainTitle">인플루언서의 PICK</h2>
+      <h1 id="entertainTitle">인플루언서의 PICK</h1>
       <div class="flexBox">
         <div id="flexItem01">
           <a href="/">
