@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import StyleView from "./StyleView";
 import StyleStat from "./StyleStat";
+import Influencer from "./Influencer";
 import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
       <Route path="/result">
         <StyleView />
         <StyleStat />
+        <Influencer />
       </Route>
     </div>
   );
