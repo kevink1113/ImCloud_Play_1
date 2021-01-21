@@ -3,13 +3,14 @@ import "./StyleView.css";
 function StyleView() {
   return (
     <div className="StyleView">
+      <div className="style_background"></div>
       <h1>당신의 패션 스타일 (유형)은?</h1>
       <div className="view_container">
         <img src="./people.png" className="photo"></img>
         <div className="view_text">
           <h4>강상원</h4>
           <h3>Urban Style</h3>
-          <p>
+          <p className="say">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque nec acleo neque. Pellentesque sed"
           </p>

@@ -6,10 +6,39 @@
   justify-content: center;
 }
 
+.style_background {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0)),
+    url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1 {
   text-align: center;
   margin-block-start: 0;
   padding-top: 10px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.say {
+  font-weight: 400;
 }
 
 .view_container {
@@ -40,8 +69,6 @@ h1 {
 .flexBox {
   padding-top: 25px;
   margin-top: 0px;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -50,11 +77,14 @@ h1 {
 }
 
 .entertainBox {
-  margin-top: 100px;
   padding-top: 0px;
-  padding-bottom: 100px;
   padding-right: 0px;
   padding-left: 0px;
+  background-color: rgb(228, 230, 224);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #entertainTitle {
@@ -71,7 +101,6 @@ h1 {
 
 #musicImage {
   width: 190px;
-  height: 50%;
   object-fit: contain;
 }
 
@@ -80,51 +109,31 @@ h1 {
   height: auto;
 }
 
-#flexItem01 {
+.flexItem {
   align-items: center;
-
   width: 289px;
-  padding-bottom: 10%;
+  padding-bottom: 30px;
 }
 
-#flexItem02 {
-  align-items: center;
-
-  width: 297px;
-  padding-bottom: 10%;
+.flexItem img {
+  padding: 30px;
+  background: white;
 }
 
-#flexItem03 {
-  align-items: center;
-
-  width: 289px;
-  padding-bottom: 10%;
-}
-
-#flexItem02text {
-  width: 62%;
-  height: 200px;
+.flexItemText {
   margin: 0 auto;
   padding: 0 0;
   text-align: initial;
 }
-
-#flexItem01text {
-  width: 62%;
+.flexItemText p {
+  width: 80%;
   margin: 0 auto;
-  padding: 0 0;
-  text-align: initial;
-}
-
-#flexItem03text {
-  width: 62%;
-  margin: 0 auto;
-  padding: 0 0;
-  text-align: initial;
 }
 
 #flexItemtitle {
   text-align: center;
+  font-weight: 400;
+  padding-top: 10px;
 }
 
 .transSec {

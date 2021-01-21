@@ -11,7 +11,6 @@ import Entertain from "./Entertain";
 import PlayLogin from "./playFinalPage/PlayLogin";
 
 import "./mainpage/MainC.css";
-
 function App() {
   return (
     <div className="total">

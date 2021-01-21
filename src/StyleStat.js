@@ -38,16 +38,16 @@ const data = [
 
 const captions = {
   // columns
-  battery: "Battery Capacity",
-  design: "Design",
-  useful: "Usefulness",
-  speed: "Speed",
-  weight: "Weight",
-  hello: "hello",
-  hallo: "hallo",
-  hbello: "hbello",
-  hcello: "hcello",
-  hdello: "hdello",
+  battery: "Contemporary",
+  design: "Formal",
+  useful: "Urban",
+  speed: "Feminine",
+  weight: "Basic",
+  hello: "Boyish",
+  hallo: "Unique",
+  hbello: "Business",
+  hcello: "Feminine",
+  hdello: "Basic",
 };
 
 class StyleStat extends React.Component {
@@ -61,7 +61,7 @@ class StyleStat extends React.Component {
 
   render() {
     return (
-      <div className="StyleView">
+      <div className="StyleStat">
         {/*<div className="Chart">
                     <StyleChart />
                 </div>*/}
@@ -86,7 +86,7 @@ class StyleStat extends React.Component {
             <RadarChart
               captions={captions}
               data={data}
-              size={450}
+              size={350}
               dots={true}
             />
           </div>

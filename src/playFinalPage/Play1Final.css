@@ -14,6 +14,7 @@
   text-align: center;
   width: auto;
   margin-bottom: 10%;
+  padding: 0 10px;
 }
 
 #nextBox {
@@ -21,15 +22,15 @@
   margin: 1rem;
 }
 #nextBox > a {
-  background-color: rgb(126, 145, 199);
-  padding: 13px 24px;
-  border-radius: 20%;
-  color: rgb(6, 7, 61);
+  background-color: rgb(100, 100, 100);
+  padding: 10px 70px;
+  border-radius: 5px;
+  color: white;
   text-decoration: none;
-  transition: all 0.229s;
+  transition: all 0.3s;
 }
 #nextBox > a:hover {
-  background-color: rgb(214, 205, 162);
+  background-color: rgb(75, 75, 75);
   border: 0px;
 }
 
@@ -44,14 +45,14 @@
 }
 
 #logTemp > a {
-  background-color: rgb(140, 179, 125);
-  padding: 13px 24px;
-  border-radius: 20%;
-  color: rgb(6, 7, 61);
+  background-color: rgb(100, 100, 100);
+  padding: 10px 70px;
+  border-radius: 5px;
+  color: white;
   text-decoration: none;
-  transition: all 0.229s;
+  transition: all 0.3s;
 }
 #logTemp > a:hover {
-  background-color: rgb(173, 168, 143);
+  background-color: rgb(75, 75, 75);
   border: 0px;
 }
