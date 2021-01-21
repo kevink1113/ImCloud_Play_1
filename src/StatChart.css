@@ -17,8 +17,8 @@
   animation: dash 4s linear forwards, filling 4s ease-in forwards;
 }
 
-.caption {
-  font-size: 1rem;
+.StyleStat .caption {
+  font-size: 0.8rem;
   text-shadow: none;
 }
 

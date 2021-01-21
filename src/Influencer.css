@@ -116,8 +116,9 @@ input#menuicon:checked ~ .background {
   animation: dash 4s linear forwards, filling 4s ease-in forwards;
 }
 
-.caption {
+.Influencer .caption {
   font-size: 1rem;
+  font-size: 0.8rem;
   text-shadow: none;
 }
 
