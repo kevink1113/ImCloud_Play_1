@@ -64,42 +64,44 @@ class PlayLogin extends Component {
   render() {
     return (
       <div className="playLogin">
-        {this.state.isLoggedIn ? (
-          <div>
-            <UserGreeting
-              title={this.state.title}
-              desc={this.state.descLogin}
-            ></UserGreeting>
-            <EndPlay name={this.state.userPlayFinish}></EndPlay>
-          </div>
-        ) : (
-          <div>
-            <UserGreeting
-              title={this.state.title}
-              desc={this.state.descLogout}
-            ></UserGreeting>
-            <EndPlay name={this.state.guestPlayFinish}></EndPlay>
-          </div>
-        )}
+        <div className="more_container">
+          {this.state.isLoggedIn ? (
+            <div>
+              <UserGreeting
+                title={this.state.title}
+                desc={this.state.descLogin}
+              ></UserGreeting>
+              <EndPlay name={this.state.userPlayFinish}></EndPlay>
+            </div>
+          ) : (
+            <div>
+              <UserGreeting
+                title={this.state.title}
+                desc={this.state.descLogout}
+              ></UserGreeting>
+              <EndPlay name={this.state.guestPlayFinish}></EndPlay>
+            </div>
+          )}
 
-        {/* 아래는 로그인 상태 바꾸는 임시 기능*/}
+          {/* 아래는 로그인 상태 바꾸는 임시 기능*/}
 
-        <EndPlay1
-          changeLog={function () {
-            this.setState({
-              isLoggedIn: true,
-            });
-          }.bind(this)}
-          finish="로그인 상태로"
-        ></EndPlay1>
-        <EndPlay1
-          changeLog={function () {
-            this.setState({
-              isLoggedIn: false,
-            });
-          }.bind(this)}
-          finish="로그아웃 상태로"
-        ></EndPlay1>
+          <EndPlay1
+            changeLog={function () {
+              this.setState({
+                isLoggedIn: true,
+              });
+            }.bind(this)}
+            finish="로그인 상태로"
+          ></EndPlay1>
+          <EndPlay1
+            changeLog={function () {
+              this.setState({
+                isLoggedIn: false,
+              });
+            }.bind(this)}
+            finish="로그아웃 상태로"
+          ></EndPlay1>
+        </div>
       </div>
     );
   }

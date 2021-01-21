@@ -61,6 +61,7 @@ class Influencer extends React.Component {
     scroll: "scroll",
     opacity2: 0,
     visibility2: "hidden",
+    zIndex: 0,
   };
 
   showDetails = (prop) => {
@@ -136,39 +137,39 @@ class Influencer extends React.Component {
         </div>
         <h1>이런 인플루언서도 있어요...</h1>
         <div className="list_container">
-          <div
-            onClick={() => {
-              this.showDetails(1);
-            }}
-            className="influencer_container"
-          >
-            <img src="./people.png" />
+          <div className="influencer_container">
+            <img
+              onClick={() => {
+                this.showDetails(1);
+              }}
+              src="./people.png"
+            />
             <p className="influencer_name">LOREM</p>
             <p>
               em. Aenean lacinia efficitur ex, eget lobortis purus venem. Aenean
               lacinia efficitur ex, eget lobortis purus ven
             </p>
           </div>
-          <div
-            onClick={() => {
-              this.showDetails(2);
-            }}
-            className="influencer_container"
-          >
-            <img src="./people.png" />
+          <div className="influencer_container">
+            <img
+              onClick={() => {
+                this.showDetails(2);
+              }}
+              src="./people.png"
+            />
             <p className="influencer_name">IPSUM</p>
             <p>
               em. Aenean lacinia efficitur ex, eget lobortis purus venem. Aenean
               lacinia efficitur ex, eget lobortis purus ven
             </p>
           </div>
-          <div
-            onClick={() => {
-              this.showDetails(3);
-            }}
-            className="influencer_container"
-          >
-            <img src="./people.png" />
+          <div className="influencer_container">
+            <img
+              onClick={() => {
+                this.showDetails(3);
+              }}
+              src="./people.png"
+            />
             <p className="influencer_name">DOLOR</p>
             <p>
               em. Aenean lacinia efficitur ex, eget lobortis purus ven em.

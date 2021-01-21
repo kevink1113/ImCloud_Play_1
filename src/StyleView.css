@@ -129,12 +129,13 @@ h1 {
 .flexItemText p {
   width: 80%;
   margin: 0 auto;
+  font-size: 0.7rem;
 }
 
 #flexItemtitle {
   text-align: center;
   font-weight: 400;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 
 .transSec {

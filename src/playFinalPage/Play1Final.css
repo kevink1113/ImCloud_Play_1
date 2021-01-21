@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .lastTitle {
@@ -16,6 +17,11 @@
   margin-bottom: 10%;
   padding: 0 10px;
 }
+.more_container {
+  background: white;
+  width: 700px;
+  padding: 20px;
+}
 
 #nextBox {
   text-align: center;
@@ -24,7 +30,7 @@
 #nextBox > a {
   background-color: rgb(100, 100, 100);
   padding: 10px 70px;
-  border-radius: 5px;
+  border-radius: 1px;
   color: white;
   text-decoration: none;
   transition: all 0.3s;
@@ -40,14 +46,13 @@
 
 #logTemp {
   text-align: center;
-  padding: 10px 10px;
-  margin: 1rem;
+  margin: 2.5rem;
 }
 
 #logTemp > a {
   background-color: rgb(100, 100, 100);
   padding: 10px 70px;
-  border-radius: 5px;
+  border-radius: 1px;
   color: white;
   text-decoration: none;
   transition: all 0.3s;
