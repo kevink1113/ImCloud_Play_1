@@ -54,6 +54,7 @@ h1 {
 .view_text {
   width: 400px;
   margin: 2rem;
+  margin-left: 4rem;
 }
 
 .photo {
@@ -168,5 +169,51 @@ h1 {
     */
     bottom: 5000px;
     z-index: -1;
+  }
+}
+
+/* ============== */
+
+.snsLink1 {
+  position: absolute;
+  float: left;
+  color: rgb(61, 61, 61);
+  font-size: 13px;
+  transition: all 0.42s;
+}
+
+#snsShow {
+  transition: all 0.4s;
+}
+
+#snsShow:hover {
+  filter: brightness(121%);
+  filter: blur(7%);
+  transition: all 0.4s ease;
+}
+
+#photo {
+  height: 420px;
+  width: 300px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+#sns {
+  display: flex;
+  margin-top: -10px;
+}
+#sns span {
+  padding-left: 4.5px;
+}
+
+#whiteBox1 {
+  padding: 16px;
+  background: rgb(244, 244, 244);
+}
+
+@media (max-width: 876px) {
+  .view_text {
+    margin-left: 2rem;
   }
 }

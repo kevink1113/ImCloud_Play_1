@@ -3,6 +3,7 @@ import "./Influencer.css";
 import RadarChart from "react-svg-radar-chart";
 import "react-svg-radar-chart/build/css/index.css";
 import { GrClose } from "react-icons/gr";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 const data = [
   {
@@ -58,6 +59,8 @@ class Influencer extends React.Component {
     opacity: 0,
     visibility: "hidden",
     scroll: "scroll",
+    opacity2: 0,
+    visibility2: "hidden",
   };
 
   showDetails = (prop) => {
@@ -85,7 +88,32 @@ class Influencer extends React.Component {
           }}
         >
           <GrClose size={20} className="X" />
-          <img src="./people.png" />
+          <div>
+            <a
+              href="/"
+              onMouseOver={() =>
+                this.setState({ opacity2: 1, visibility2: "visible" })
+              }
+              onMouseOut={() =>
+                this.setState({ opacity2: 0, visibility2: "hidden" })
+              }
+            >
+              <img src="./people.png" />
+            </a>
+            <div
+              className="snsLink1"
+              style={{
+                opacity: this.state.opacity2,
+                visibility: this.state.visibility2,
+              }}
+            >
+              <div id="sns">
+                <AiOutlineInstagram size={20} />
+                <span>Follow Aenean lacinia efficitur</span>
+              </div>
+            </div>
+          </div>
+
           <div className="detail_text">
             <h3>Influencer {this.state.person}</h3>
             <p>

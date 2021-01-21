@@ -63,6 +63,9 @@ input[id="menuicon"] + label {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.background #sns {
+  margin-left: 1rem;
+}
 .X {
   position: fixed;
   top: 10px;
@@ -70,9 +73,17 @@ input[id="menuicon"] + label {
   pointer-events: none;
 }
 .background img {
-  height: 500px;
+  height: 420px;
+  width: 300px;
   margin: 1rem;
   object-fit: cover;
+  transition: all 0.4s;
+}
+
+.background img:hover {
+  filter: brightness(121%);
+  filter: blur(7%);
+  transition: all 0.4s ease;
 }
 /*
 input#menuicon:checked ~ .background {
