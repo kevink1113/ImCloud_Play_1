@@ -1,28 +1,31 @@
-import "./MainC.css";
 import React, { Component } from "react";
-import MainPage2 from "./MainPage2";
-import StartButton from "./StartButton";
+import styled from "styled-components";
+import Button from "../components/Button";
 
+const StartPage = styled.div`
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 class MainPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mainTitle: "Lorem ipsum dolor sit amet",
-      mainContents:
-        " consectetur adipiscing elitPellentesque nec leo neque. Pellentesque sed est mattis, rhoncus elit eu",
-      startB: "시작",
-    };
-  }
+  state = {
+    title: "Lorem ipsum dolor sit amet",
+    contents:
+      " consectetur adipiscing elitPellentesque nec leo neque. Pellentesque sed est mattis, rhoncus elit eu",
+    start: "시작",
+  };
 
   render() {
     return (
-      <div className="main">
-        <MainPage2
-          title={this.state.mainTitle}
-          cont={this.state.mainContents}
-        />
-        <StartButton start={this.state.startB}></StartButton>
-      </div>
+      <StartPage>
+        <h2> {this.state.title}</h2>
+        <div>{this.state.contents}</div>
+        <Button link="/result" label={this.state.start} size="large" />
+      </StartPage>
     );
   }
 }

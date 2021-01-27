@@ -1,7 +1,71 @@
 import React from "react";
 import RadarChart from "react-svg-radar-chart";
+import styled, { keyframes } from "styled-components";
 import "react-svg-radar-chart/build/css/index.css";
-import "./StatChart.css";
+
+const StyledStat = styled.div`
+  min-height: 100vh;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+`;
+
+const ViewContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+  align-items: center;
+  align-content: center;
+`;
+
+const ViewText = styled.div`
+  width: 400px;
+  margin: 2rem;
+  margin-left: 4rem;
+  @media (max-width: 876px) {
+    margin-left: 2rem;
+  }
+`;
+
+const dash = keyframes`
+  from {
+    stroke-opacity: 0.3;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+`;
+
+const filling = keyframes`
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 0.3;
+  }
+`;
+
+const Chart = styled.div`
+  .caption {
+    font-size: 0.8rem;
+    text-shadow: none;
+  }
+
+  .shape:hover {
+    fill-opacity: 1;
+  }
+
+  path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: ${dash} 4s linear forwards, ${filling} 4s ease-in forwards;
+  }
+`;
 
 const data = [
   {
@@ -61,14 +125,10 @@ class StyleStat extends React.Component {
 
   render() {
     return (
-      <div className="StyleStat">
-        {/*<div className="Chart">
-                    <StyleChart />
-                </div>*/}
-
+      <StyledStat>
         <h1>스타일 유형에 대한 설명</h1>
-        <div className="view_container">
-          <div className="view_text">
+        <ViewContainer>
+          <ViewText>
             <h3>스타일 유형</h3>
             <p>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -81,17 +141,17 @@ class StyleStat extends React.Component {
               cursus rhoncus nulla turpis quis sem. Aenean lacinia efficitur ex,
               eget lobortis purus ven
             </p>
-          </div>
-          <div className="Chart">
+          </ViewText>
+          <Chart>
             <RadarChart
               captions={captions}
               data={data}
               size={350}
               dots={true}
             />
-          </div>
-        </div>
-      </div>
+          </Chart>
+        </ViewContainer>
+      </StyledStat>
     );
   }
 }

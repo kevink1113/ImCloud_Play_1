@@ -2,15 +2,15 @@ import "./StyleView.css";
 
 function Entertain() {
   return (
-    <div class="entertainBox">
+    <div className="entertainBox">
       <h1 id="entertainTitle">인플루언서의 PICK</h1>
-      <div class="flexBox">
-        <div class="flexItem">
+      <div className="flexBox">
+        <div className="flexItem">
           <a href="/">
             <img src="./book001.jpg" id="bookImage"></img>
           </a>
 
-          <div class="flexItemText">
+          <div className="flexItemText">
             <div id="flexItemtitle">Book!</div>
             <p>
               Lorem ipsum dolor sit amet, ctetur adipiscing elit. Pellentesque
@@ -19,12 +19,12 @@ function Entertain() {
           </div>
         </div>
 
-        <div class="flexItem">
+        <div className="flexItem">
           <a href="/">
             <img src="./music001.jpg" id="musicImage"></img>
           </a>
 
-          <div class="flexItemText">
+          <div className="flexItemText">
             <div id="flexItemtitle">Music!</div>
             <p>
               Lorem ipsum dolor si amet, con adipiscing elit. Pellentesque nec
@@ -33,12 +33,12 @@ function Entertain() {
           </div>
         </div>
 
-        <div class="flexItem">
+        <div className="flexItem">
           <a href="/">
             <img src="./movie001.jpg" id="movieImage"></img>
           </a>
 
-          <div class="flexItemText">
+          <div className="flexItemText">
             <div id="flexItemtitle">Movie!</div>
             <p>
               Lorem ipsum dolor si amet, con adipiscing elit. Pellentesque nec

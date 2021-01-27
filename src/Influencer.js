@@ -1,9 +1,9 @@
 import React from "react";
-import "./Influencer.css";
 import RadarChart from "react-svg-radar-chart";
+import styled, { keyframes } from "styled-components";
 import "react-svg-radar-chart/build/css/index.css";
 import { GrClose } from "react-icons/gr";
-import { AiOutlineInstagram } from "react-icons/ai";
+import ProfilePhoto from "./components/ProfilePhoto";
 
 const data = [
   {
@@ -52,6 +52,123 @@ const captions = {
   hdello: "Basic",
 };
 
+const Background = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  z-index: 100000;
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media (max-width: 1000px) {
+    img {
+      margin-top: 40px;
+    }
+  }
+`;
+
+const StyledInfluencer = styled.div`
+  min-height: 100vh;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+`;
+
+const InfluencerContainer = styled.div`
+  max-width: 220px;
+  margin: 1rem;
+  img {
+    width: 220px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+  p {
+    width: inherit;
+  }
+`;
+
+const InfluencerName = styled.p`
+  font-weight: 500;
+`;
+
+const ListContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+`;
+
+const DetailText = styled.div`
+  max-width: 600px;
+  margin: 1rem;
+  background: none;
+`;
+
+const X = styled(GrClose)`
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  pointer-events: none;
+`;
+
+const dash = keyframes`
+  from {
+    stroke-opacity: 0.3;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+`;
+
+const filling = keyframes`
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 0.3;
+  }
+`;
+
+const Chart = styled.div`
+  text-align: center;
+
+  .caption {
+    font-size: 0.8rem;
+    text-shadow: none;
+  }
+
+  .shape:hover {
+    fill-opacity: 1;
+  }
+
+  path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: ${dash} 4s linear forwards, ${filling} 4s ease-in forwards;
+  }
+`;
+
 class Influencer extends React.Component {
   state = {
     data: null,
@@ -76,9 +193,8 @@ class Influencer extends React.Component {
 
   render() {
     return (
-      <div className="Influencer">
-        <div
-          className="background"
+      <StyledInfluencer>
+        <Background
           onClick={() => {
             this.setState({ opacity: 0, visibility: "hidden" });
             document.body.style.overflowY = "scroll";
@@ -88,34 +204,14 @@ class Influencer extends React.Component {
             visibility: this.state.visibility,
           }}
         >
-          <GrClose size={20} className="X" />
-          <div>
-            <a
-              href="/"
-              onMouseOver={() =>
-                this.setState({ opacity2: 1, visibility2: "visible" })
-              }
-              onMouseOut={() =>
-                this.setState({ opacity2: 0, visibility2: "hidden" })
-              }
-            >
-              <img src="./people.png" />
-            </a>
-            <div
-              className="snsLink1"
-              style={{
-                opacity: this.state.opacity2,
-                visibility: this.state.visibility2,
-              }}
-            >
-              <div id="sns">
-                <AiOutlineInstagram size={20} />
-                <span>Follow Aenean lacinia efficitur</span>
-              </div>
-            </div>
-          </div>
+          <X size={20} />
+          <ProfilePhoto
+            src="./people.png"
+            influencer_id="sangwon_1113"
+            size="medium"
+          />
 
-          <div className="detail_text">
+          <DetailText>
             <h3>Influencer {this.state.person}</h3>
             <p>
               Lorem Ipsum em. Aenean lacinia efficitur ex, eget lobortis purus
@@ -125,59 +221,59 @@ class Influencer extends React.Component {
               efficitur ex, eget lobortis purus venem. Aenean lacinia efficitur
               ex, eget lobortis purus ven
             </p>
-            <div className="Chart">
+            <Chart>
               <RadarChart
                 captions={captions}
                 data={data}
                 size={300}
                 dots={true}
               />
-            </div>
-          </div>
-        </div>
+            </Chart>
+          </DetailText>
+        </Background>
         <h1>이런 인플루언서도 있어요...</h1>
-        <div className="list_container">
-          <div className="influencer_container">
+        <ListContainer>
+          <InfluencerContainer>
             <img
               onClick={() => {
                 this.showDetails(1);
               }}
               src="./people.png"
             />
-            <p className="influencer_name">LOREM</p>
+            <InfluencerName>LOREM</InfluencerName>
             <p>
               em. Aenean lacinia efficitur ex, eget lobortis purus venem. Aenean
               lacinia efficitur ex, eget lobortis purus ven
             </p>
-          </div>
-          <div className="influencer_container">
+          </InfluencerContainer>
+          <InfluencerContainer>
             <img
               onClick={() => {
                 this.showDetails(2);
               }}
               src="./people.png"
             />
-            <p className="influencer_name">IPSUM</p>
+            <InfluencerName>LOREM</InfluencerName>
             <p>
               em. Aenean lacinia efficitur ex, eget lobortis purus venem. Aenean
               lacinia efficitur ex, eget lobortis purus ven
             </p>
-          </div>
-          <div className="influencer_container">
+          </InfluencerContainer>
+          <InfluencerContainer>
             <img
               onClick={() => {
                 this.showDetails(3);
               }}
               src="./people.png"
             />
-            <p className="influencer_name">DOLOR</p>
+            <InfluencerName>LOREM</InfluencerName>
             <p>
-              em. Aenean lacinia efficitur ex, eget lobortis purus ven em.
-              Aenean lacinia efficitur ex, eget lobortis purus ven
+              em. Aenean lacinia efficitur ex, eget lobortis purus venem. Aenean
+              lacinia efficitur ex, eget lobortis purus ven
             </p>
-          </div>
-        </div>
-      </div>
+          </InfluencerContainer>
+        </ListContainer>
+      </StyledInfluencer>
     );
   }
 }

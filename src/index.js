@@ -8,9 +8,9 @@ import reportWebVitals from "./reportWebVitals";
 import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
 import Entertain from "./Entertain";
-import PlayLogin from "./playFinalPage/PlayLogin";
+import PlayLogin from "./learn_more/PlayLogin";
 
-import "./mainpage/MainC.css";
+// import "./mainpage/MainC.css";
 function App() {
   return (
     <div className="total">
