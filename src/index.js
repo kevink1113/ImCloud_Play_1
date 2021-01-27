@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import StyleView from "./StyleView";
 import StyleStat from "./StyleStat";
 import Influencer from "./Influencer";
@@ -9,11 +8,19 @@ import MainPage from "./mainpage/MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
 import Entertain from "./Entertain";
 import PlayLogin from "./learn_more/PlayLogin";
+import styled from "styled-components";
+
+const Total = styled.div`
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  font-weight: 300;
+  overflow-x: hidden;
+`;
 
 // import "./mainpage/MainC.css";
 function App() {
   return (
-    <div className="total">
+    <Total>
       {/*  시작페이지  */}
       <Route exact path="/">
         <MainPage />
@@ -26,7 +33,7 @@ function App() {
         <Influencer />
         <PlayLogin />
       </Route>
-    </div>
+    </Total>
   );
 }
 

@@ -67,6 +67,39 @@ const Chart = styled.div`
   }
 `;
 
+let data0 = [
+  {
+    data: {
+      battery: 0,
+      design: 0,
+      useful: 0,
+      speed: 0,
+      weight: 0,
+      hello: 0,
+      hallo: 0,
+      hbello: 0,
+      hcello: 0,
+      hdello: 0,
+    },
+    meta: { color: "blue" },
+  },
+  {
+    data: {
+      battery: 0,
+      design: 0,
+      useful: 0,
+      speed: 0,
+      weight: 0,
+      hello: 0,
+      hallo: 0,
+      hbello: 0,
+      hcello: 0,
+      hdello: 0,
+    },
+    meta: { color: "red" },
+  },
+];
+
 const data = [
   {
     data: {
@@ -142,11 +175,12 @@ class StyleStat extends React.Component {
               eget lobortis purus ven
             </p>
           </ViewText>
+
           <Chart>
             <RadarChart
               captions={captions}
               data={data}
-              size={350}
+              size={300}
               dots={true}
             />
           </Chart>
