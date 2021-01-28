@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Button from "../components/Button";
+import Button from "./components/Button";
 
 const StartPage = styled.div`
   text-align: center;

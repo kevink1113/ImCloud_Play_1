@@ -37,13 +37,6 @@ const Profile = styled.div`
     width: 10px;
   }
 
-  &.no_sns {
-    ${Sns} {
-      display: none;
-      background-color: green;
-    }
-  }
-
   &:hover {
     ${Sns} {
       opacity: 1;
@@ -71,10 +64,10 @@ const ProfileImg = styled.img`
   }
 `;
 
-const ProfilePhoto = ({ src, link, size, no_sns, influencer_id }) => {
+const ProfilePhoto = ({ src, size, influencer_id }) => {
   const url = "https://www.instagram.com/";
   return (
-    <Profile className={(size, no_sns)} no_sns={no_sns}>
+    <Profile className={size}>
       <a href={url + influencer_id} target="blank">
         <ProfileImg className={size} src={src} />
       </a>

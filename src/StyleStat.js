@@ -1,7 +1,7 @@
 import React from "react";
-import RadarChart from "react-svg-radar-chart";
-import styled, { keyframes } from "styled-components";
-import "react-svg-radar-chart/build/css/index.css";
+import styled from "styled-components";
+import Title from "./components/Title";
+import RadarCharts from "./components/RadarCharts";
 
 const StyledStat = styled.div`
   min-height: 100vh;
@@ -30,75 +30,6 @@ const ViewText = styled.div`
     margin-left: 2rem;
   }
 `;
-
-const dash = keyframes`
-  from {
-    stroke-opacity: 0.3;
-  }
-  to {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-`;
-
-const filling = keyframes`
-  from {
-    fill-opacity: 0;
-  }
-  to {
-    fill-opacity: 0.3;
-  }
-`;
-
-const Chart = styled.div`
-  .caption {
-    font-size: 0.8rem;
-    text-shadow: none;
-  }
-
-  .shape:hover {
-    fill-opacity: 1;
-  }
-
-  path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: ${dash} 4s linear forwards, ${filling} 4s ease-in forwards;
-  }
-`;
-
-let data0 = [
-  {
-    data: {
-      battery: 0,
-      design: 0,
-      useful: 0,
-      speed: 0,
-      weight: 0,
-      hello: 0,
-      hallo: 0,
-      hbello: 0,
-      hcello: 0,
-      hdello: 0,
-    },
-    meta: { color: "blue" },
-  },
-  {
-    data: {
-      battery: 0,
-      design: 0,
-      useful: 0,
-      speed: 0,
-      weight: 0,
-      hello: 0,
-      hallo: 0,
-      hbello: 0,
-      hcello: 0,
-      hdello: 0,
-    },
-    meta: { color: "red" },
-  },
-];
 
 const data = [
   {
@@ -159,7 +90,7 @@ class StyleStat extends React.Component {
   render() {
     return (
       <StyledStat>
-        <h1>스타일 유형에 대한 설명</h1>
+        <Title title="스타일 유형에 대한 설명" />
         <ViewContainer>
           <ViewText>
             <h3>스타일 유형</h3>
@@ -175,15 +106,7 @@ class StyleStat extends React.Component {
               eget lobortis purus ven
             </p>
           </ViewText>
-
-          <Chart>
-            <RadarChart
-              captions={captions}
-              data={data}
-              size={300}
-              dots={true}
-            />
-          </Chart>
+          <RadarCharts captions={captions} data={data} size={300} />
         </ViewContainer>
       </StyledStat>
     );

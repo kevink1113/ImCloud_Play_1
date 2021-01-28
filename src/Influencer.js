@@ -1,9 +1,9 @@
 import React from "react";
-import RadarChart from "react-svg-radar-chart";
-import styled, { keyframes } from "styled-components";
-import "react-svg-radar-chart/build/css/index.css";
+import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
 import ProfilePhoto from "./components/ProfilePhoto";
+import Title from "./components/Title";
+import RadarCharts from "./components/RadarCharts";
 
 const data = [
   {
@@ -131,44 +131,6 @@ const X = styled(GrClose)`
   pointer-events: none;
 `;
 
-const dash = keyframes`
-  from {
-    stroke-opacity: 0.3;
-  }
-  to {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-`;
-
-const filling = keyframes`
-  from {
-    fill-opacity: 0;
-  }
-  to {
-    fill-opacity: 0.3;
-  }
-`;
-
-const Chart = styled.div`
-  text-align: center;
-
-  .caption {
-    font-size: 0.8rem;
-    text-shadow: none;
-  }
-
-  .shape:hover {
-    fill-opacity: 1;
-  }
-
-  path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: ${dash} 4s linear forwards, ${filling} 4s ease-in forwards;
-  }
-`;
-
 class Influencer extends React.Component {
   state = {
     data: null,
@@ -194,6 +156,7 @@ class Influencer extends React.Component {
   render() {
     return (
       <StyledInfluencer>
+        {/* 선택했을 때 나오는 불투명 배경 & 내용 */}
         <Background
           onClick={() => {
             this.setState({ opacity: 0, visibility: "hidden" });
@@ -221,17 +184,12 @@ class Influencer extends React.Component {
               efficitur ex, eget lobortis purus venem. Aenean lacinia efficitur
               ex, eget lobortis purus ven
             </p>
-            <Chart>
-              <RadarChart
-                captions={captions}
-                data={data}
-                size={300}
-                dots={true}
-              />
-            </Chart>
+            <RadarCharts captions={captions} data={data} size={300} />
           </DetailText>
         </Background>
-        <h1>이런 인플루언서도 있어요...</h1>
+
+        {/* 여기서부터 본 화면 */}
+        <Title title="이런 인플루언서도 있어요..." />
         <ListContainer>
           <InfluencerContainer>
             <img

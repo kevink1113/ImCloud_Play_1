@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./StyleView.css";
-import ProfilePhoto from "./components/ProfilePhoto";
 import styled from "styled-components";
+import ProfilePhoto from "./components/ProfilePhoto";
+import Title from "./components/Title";
 
 const StyledView = styled.div`
   min-height: 100vh;
@@ -67,12 +67,12 @@ class StyleView extends Component {
     return (
       <StyledView>
         <StyleBackground />
-        <h1>당신의 패션 스타일 (유형)은?</h1>
+        <Title title="당신의 패션 스타일 (유형)은?" />
         <ViewContainer>
           <ProfilePhoto
             src="./people.png"
             influencer_id="sangwon_1113"
-            size="middle"
+            size="medium"
           />
           <ViewText>
             <h4>강상원</h4>

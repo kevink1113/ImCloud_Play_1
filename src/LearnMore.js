@@ -1,14 +1,42 @@
 import React, { Component } from "react";
-import Button from "../components/Button";
+import styled from "styled-components";
+import Button from "./components/Button";
+import Title from "./components/Title";
 
-import "./Play1Final.css";
+const StyledLearnMore = styled.div`
+  min-height: 100vh;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LearnMoreBox = styled.div`
+  background: white;
+  width: 700px;
+  padding: 20px 0;
+  text-align: center;
+  @media (max-width: 700px) {
+    width: 100vw;
+  }
+`;
+
+const LoginOutTmp = styled.div`
+  margin: 2.5rem;
+`;
+
+const LoginOutMsg = styled.div`
+  margin-bottom: 10%;
+  padding: 0 10px;
+`;
 
 class UserGreeting extends Component {
   render() {
     return (
       <div>
-        <h1 className="lastTitle"> {this.props.title} </h1>
-        <div className="lastCont"> {this.props.desc} </div>
+        <Title title={this.props.title} />
+        <LoginOutMsg> {this.props.desc} </LoginOutMsg>
       </div>
     );
   }
@@ -17,7 +45,7 @@ class UserGreeting extends Component {
 class EndPlay1 extends Component {
   render() {
     return (
-      <div id="logTemp">
+      <LoginOutTmp>
         <a
           href="/"
           onClick={function (e) {
@@ -27,12 +55,12 @@ class EndPlay1 extends Component {
         >
           {this.props.finish}
         </a>
-      </div>
+      </LoginOutTmp>
     );
   }
 }
 
-class PlayLogin extends Component {
+class LearnMore extends Component {
   state = {
     isLoggedIn: false,
     title: "더 알아보기",
@@ -49,8 +77,8 @@ class PlayLogin extends Component {
 
   render() {
     return (
-      <div className="playLogin">
-        <div className="more_container">
+      <StyledLearnMore>
+        <LearnMoreBox>
           {this.state.isLoggedIn ? (
             <div>
               <UserGreeting
@@ -81,7 +109,7 @@ class PlayLogin extends Component {
                 isLoggedIn: true,
               });
             }}
-            finish="로그인 상태로"
+            finish="로그인 상태로 (임시)"
           ></EndPlay1>
           <EndPlay1
             changeLog={() => {
@@ -89,12 +117,12 @@ class PlayLogin extends Component {
                 isLoggedIn: false,
               });
             }}
-            finish="로그아웃 상태로"
+            finish="로그아웃 상태로 (임시)"
           ></EndPlay1>
-        </div>
-      </div>
+        </LearnMoreBox>
+      </StyledLearnMore>
     );
   }
 }
 
-export default PlayLogin;
+export default LearnMore;

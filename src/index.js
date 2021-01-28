@@ -4,23 +4,25 @@ import StyleView from "./StyleView";
 import StyleStat from "./StyleStat";
 import Influencer from "./Influencer";
 import reportWebVitals from "./reportWebVitals";
-import MainPage from "./mainpage/MainPage";
+import MainPage from "./MainPage";
 import { BrowserRouter, Route } from "react-router-dom";
-import Entertain from "./Entertain";
-import PlayLogin from "./learn_more/PlayLogin";
-import styled from "styled-components";
+import Media from "./Media";
+import LearnMore from "./LearnMore";
+import { createGlobalStyle } from "styled-components";
 
-const Total = styled.div`
-  font-family: "Noto Sans KR", sans-serif;
-  margin: 0;
-  font-weight: 300;
-  overflow-x: hidden;
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
 `;
 
-// import "./mainpage/MainC.css";
 function App() {
   return (
-    <Total>
+    <React.Fragment>
       {/*  시작페이지  */}
       <Route exact path="/">
         <MainPage />
@@ -29,16 +31,17 @@ function App() {
       <Route path="/result">
         <StyleView />
         <StyleStat />
-        <Entertain />
+        <Media />
         <Influencer />
-        <PlayLogin />
+        <LearnMore />
       </Route>
-    </Total>
+    </React.Fragment>
   );
 }
 
 ReactDOM.render(
   <BrowserRouter>
+    <GlobalStyle />
     <App />
   </BrowserRouter>,
   document.getElementById("root")
